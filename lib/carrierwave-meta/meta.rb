@@ -72,7 +72,7 @@ module CarrierWave
           elsif processor?(:mini_magick, img) && is_dimensionable
             size << img['width']
             size << img['height']
-          elsif processor?(:socrecy, img) && is_image
+          elsif processor?(:sorcery, img) && is_image
             size << img.dimensions[:x].to_i
             size << img.dimensions[:y].to_i
           elsif processor?(:vips, img) && is_image
@@ -96,7 +96,7 @@ module CarrierWave
     PROCESSORS = {
       rmagick: 'Magick::Image',
       mini_magick: 'MiniMagick::Image',
-      socrecy: 'ImageSorcery',
+      sorcery: 'ImageSorcery',
       vips: 'VIPS::Image'
     }
   end
