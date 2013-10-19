@@ -79,7 +79,7 @@ module CarrierWave
             size << img.x_size
             size << img.y_size
           else
-            raise "Unsupported file type/image processor (use RMagick, MiniMagick, ImageSorcery, VIPS)"
+            # raise "Unsupported file type/image processor (use RMagick, MiniMagick, ImageSorcery, VIPS)"
           end
           img
         end if respond_to? :manipulate!
